@@ -75,6 +75,6 @@ class LoadPayPalExpressSettingsData extends AbstractFixture implements Container
      */
     public function setContainer(ContainerInterface $container = null)
     {
-        $this->encoder = $container->get('oro_security.encoder.mcrypt');
+        $this->encoder = $container->get('oro_security.encoder.default');
     }
 }
