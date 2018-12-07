@@ -15,7 +15,7 @@
     },
     "require": {
         "php": ">=7.0",
-        "oro/commerce": "3.0.*",
+        "oro/commerce": "3.1.*",
         "psr/log": "1.0.*",
         "paypal/rest-api-sdk-php": "1.13.*"
     },
@@ -33,7 +33,7 @@
     "prefer-stable": true,
     "extra": {
         "branch-alias": {
-            "dev-master": "3.0.x-dev"
+            "dev-master": "3.1.x-dev"
         }
     }
 }
