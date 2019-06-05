@@ -45,6 +45,10 @@ class PayPalExpressRedirectListener
             return;
         }
 
+        if (!$paymentTransaction->isActive()) {
+            return;
+        }
+
         $paymentTransaction
             ->setSuccessful(false)
             ->setActive(false);
@@ -72,6 +76,10 @@ class PayPalExpressRedirectListener
         if (!$paymentTransaction || !isset($eventData['paymentId'], $eventData['PayerID'], $eventData['token']) ||
             $eventData['paymentId'] !== $paymentTransaction->getReference()
         ) {
+            return;
+        }
+
+        if (!$paymentTransaction->isActive()) {
             return;
         }
 
